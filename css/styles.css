@@ -1,7 +1,53 @@
 /*==================== VARIABLES CSS ====================*/
 :root {
+  /*========== Colors ==========*/
+  --body-color-dark: #0f172a;
+  --body-color-light: #f5f7f8;
+  --primary-color: #3f51b5;
+  --secondary-color: #757de8;
+  --accent-color: #2196f3;
+  --dark-color: #3d3c42;
+  --light-color: #fff6f6;
+  --positive-color: #21ba45;
+  --negative-color: #c10015;
+  --info-color: #31ccec;
+  --warning-color: #f2c037;
+
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
+
+  --h1-font-size: 9.6rem;
+  --h2-font-size: 6rem;
+  --h3-font-size: 4.8rem;
+  --h4-font-size: 3.4rem;
+  --h5-font-size: 2.4rem;
+  --h6-font-size: 2rem;
+  --normal-font-size: 1.6rem;
+  --small-font-size: 1.4rem;
+  --smaller-font-size: 1.2rem;
+
+  /*========== Font weight ==========*/
+  --font-thin: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-bolder: 800;
+
+  /*========== Margins ==========*/
+  --m-xs: 0.4rem;
+  --m-sm: 0.8rem;
+  --m-md: 1.6rem;
+  --m-lg: 2.4rem;
+  --m-xl: 4.8rem;
+
+  /*========== Paddings ==========*/
+  --p-xs: 0.4rem;
+  --p-sm: 0.8rem;
+  --p-md: 1.6rem;
+  --p-lg: 2.4rem;
+  --p-xl: 4.8rem;
 }
 
 /*==================== BASE ====================*/
@@ -13,8 +59,12 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
   font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color-dark);
+  color: var(--light-color);
 }
