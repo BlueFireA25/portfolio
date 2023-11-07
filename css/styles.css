@@ -3,9 +3,9 @@
   /*========== Colors ==========*/
   --body-color-dark: #0f172a;
   --body-color-light: #f5f7f8;
-  --primary-color: #3f51b5;
+  --primary-color: #2196f3;
   --secondary-color: #757de8;
-  --accent-color: #2196f3;
+  --accent-color: #3f51b5;
   --dark-color: #3d3c42;
   --light-color: #fff6f6;
   --positive-color: #21ba45;
@@ -67,4 +67,123 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color-dark);
   color: var(--light-color);
+  padding: 4.8rem 2.4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+  padding: 0 0 10rem;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.section__title {
+  display: inline-block;
+  width: fit-content;
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  text-align: center;
+  line-height: 28px;
+  padding: 0.4rem 0;
+  border-bottom: 2px solid var(--primary-color, #2196f3);
+}
+
+/*==================== HOME ====================*/
+.home__title {
+  margin-bottom: var(--m-md);
+  font-size: var(--h4-font-size);
+  font-weight: var(--font-bold);
+  letter-spacing: -0.4px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.home__subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--h6-font-size);
+  font-weight: var(--font-medium);
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  text-align: center;
+}
+
+/*==================== EXPERIENCE ====================*/
+/*==================== PROJECTS ====================*/
+.projects__container {
+  margin-top: 4.8rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-link span {
+  color: var(--light-color);
+  font-size: var(--normal-font-size);
+}
+
+.project-link:hover span {
+  text-decoration: underline var(--light-color);
+  text-underline-offset: var(--m-sm);
+}
+
+.project-link i {
+  display: inline-block;
+  color: var(--light-color);
+  font-size: var(--normal-font-size);
+  transition: transform 0.3s ease-in-out;
+  margin-left: var(--m-xs);
+}
+
+.project-link:hover i {
+  transform: translate(4px, -4px);
+}
+
+/*==================== ALL PROJECTS ====================*/
+.back-home {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--m-sm);
+}
+
+.back-home span {
+  color: var(--primary-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  line-height: 20px;
+}
+
+.back-home:hover span {
+  text-decoration: underline var(--primary-color);
+  text-underline-offset: var(--m-sm);
+}
+
+.back-home i {
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: var(--h5-font-size);
+  transition: transform 0.3s ease-in-out;
+  margin-right: var(--m-xs);
+}
+
+.back-home:hover i {
+  transform: translateX(-4px);
+}
+
+.all-projects-container .title {
+  font-size: var(--h4-font-size);
+  letter-spacing: -1.2px;
+  line-height: 48px;
+  margin-bottom: var(--m-xl);
 }

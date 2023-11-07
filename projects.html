@@ -58,6 +58,12 @@
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
 
+    <!--==================== UNICONS ====================-->
+    <link
+      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+      rel="stylesheet"
+    />
+
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="css/styles.css" />
 
@@ -68,13 +74,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
-    <!--==================== JS ====================-->
-    <script src="js/script.js" defer></script>
-    <noscript>
-      This website requires JavaScript to function correctly. Please enable it
-      in your browser.
-    </noscript>
   </head>
   <body>
     <!--==================== HEADER ====================-->
@@ -82,53 +81,21 @@
 
     <!--==================== MAIN ====================-->
     <main class="main">
-      <!--==================== HOME ====================-->
-      <section class="home section" id="home">
-        <h2 class="home__title">Sebastián Ibagué Castro</h2>
-        <h1 class="home__subtitle">
-          <span>Frontend Developer</span>
-          <span>Systems Engineer</span>
-        </h1>
-      </section>
+      <a class="back-home" href="index.html">
+        <i class="uil uil-arrow-left"></i>
+        <span>Sebastián Ibagué Castro</span>
+      </a>
+      <div class="all-projects-container">
+        <h2 class="title">All Projects</h2>
 
-      <!--==================== EXPERIENCE ====================-->
-      <section class="experience section" id="experience">
-        <div class="title-container">
-          <h2 class="section__title">Experience</h2>
-        </div>
-      </section>
-
-      <!--==================== PROJECTS ====================-->
-      <section class="projects section" id="projects">
-        
-        <div class="title-container">
-          <h2 class="section__title">Projects</h2>
-        </div>
-        <div class="projects__container">
-            <a class="project-link" href="projects.html">
-              <span>View Full Projects</span>
-              <i class="uil uil-external-link-alt icon"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!--==================== SKILLS ====================-->
-      <section class="skills section" id="skills">
-        <div class="title-container">
-          <h2 class="section__title">Skills</h2>
-        </div>
-      </section>
-
-      <!--==================== CONTACT ====================-->
-      <section class="contact section" id="contact">
-        <div class="title-container">
-          <h2 class="section__title">Contact</h2>
-        </div>
-      </section>
+        <div id="wrapper"></div>
+      </div>
     </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer"></footer>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
