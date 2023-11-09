@@ -3,7 +3,6 @@ const data = [
     [createType('Landing Page'), createLinkTitle('Halloween Store', 'https://halloweenstore.netlify.app/'), createBuildWith(['HTML', 'CSS', 'JavaScript', 'vue', 'quasar', 'laravel', 'java'])],
     [createType('Landing Page'), createLinkTitle('Christmas Store', 'https://christmastore.netlify.app/'), createBuildWith(['HTML', 'CSS', 'JavaScript'])],
 ];
-let grid;
 
 /**
  * Create or update the Grid.js table based on window width.
@@ -11,11 +10,7 @@ let grid;
  * If the table instance does not exist, it is created and rendered.
  */
 function createGrid() {
-    if (grid) {
-        grid.destroy();
-    }
-
-    grid = new gridjs.Grid({
+    new gridjs.Grid({
         columns: [
             {
                 name: 'Type',
@@ -25,7 +20,6 @@ function createGrid() {
             },
             {
                 name: 'Built with',
-                hidden: window.innerWidth <= 425,
             },
         ],
         pagination: {
@@ -100,4 +94,3 @@ function createBuildWith(skills) {
 }
 
 createGrid(); // Create Table
-window.addEventListener('resize', createGrid);

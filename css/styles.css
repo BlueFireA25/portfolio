@@ -198,6 +198,14 @@ a {
   margin-bottom: var(--m-xl);
 }
 
+#wrapper td:last-child {
+  display: none;
+}
+
+#wrapper th:last-child {
+  display: none;
+}
+
 /* Projects table */
 .gridjs-wrapper {
   box-shadow: none;
@@ -297,6 +305,14 @@ a {
 
   .all-projects-container .title {
     font-size: var(--h3-font-size);
+  }
+
+  #wrapper td:last-child {
+    display: table-cell;
+  }
+
+  #wrapper th:last-child {
+    display: table-cell;
   }
 }
 
