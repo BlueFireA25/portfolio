@@ -1,41 +1,89 @@
-function createLinkTitle(text, href) {
-    if (window.innerWidth < 768) {
-        const link = document.createElement("a");
-        const icon = document.createElement("i");
+// VARIABLES //
+const data = [
+    [createType('Landing Page'), createLinkTitle('Halloween Store', 'https://halloweenstore.netlify.app/'), createBuildWith(['HTML', 'CSS', 'JavaScript', 'vue', 'quasar', 'laravel', 'java'])],
+    [createType('Landing Page'), createLinkTitle('Christmas Store', 'https://christmastore.netlify.app/'), createBuildWith(['HTML', 'CSS', 'JavaScript'])],
+];
+let grid;
 
-        link.href = href;
-        link.target = "_blank";
-        link.textContent = text;
-        link.className = 'table__tbody--project'
-        icon.className = "uil uil-external-link-alt";
-        link.appendChild(icon);
-
-        return link;
-    } else {
-        const link = document.createElement("span");
-
-        link.textContent = text;
-        link.className = 'table__tbody--project'
-
-        return link;
+/**
+ * Create or update the Grid.js table based on window width.
+ * If the table instance exists, it is destroyed and recreated with updated settings.
+ * If the table instance does not exist, it is created and rendered.
+ */
+function createGrid() {
+    if (grid) {
+        grid.destroy();
     }
+
+    grid = new gridjs.Grid({
+        columns: [
+            {
+                name: 'Type',
+            },
+            {
+                name: 'Project',
+            },
+            {
+                name: 'Built with',
+                hidden: window.innerWidth <= 425,
+            },
+        ],
+        pagination: {
+            limit: 4
+        },
+        search: true,
+        data: data,
+        className: {
+            table: 'table',
+            container: 'table__container',
+            tbody: 'table__tbody',
+            td: 'table__tbody--td',
+            th: 'table__tbody--th',
+            footer: 'table__footer',
+            pagination: 'table__pagination',
+        },
+    }).render(document.getElementById("wrapper"));
 }
 
-function createLink(text, href) {
+/**
+ * Create and return a DOM element representing a type label.
+ * @param {string} text - The text content of the type label.
+ * @returns {HTMLElement} - A DOM element representing the type label.
+ */
+function createType(text) {
+    const link = document.createElement("span");
+
+    link.textContent = text;
+    link.className = 'table__tbody--type'
+
+    return link;
+}
+
+/**
+ * Create and return a hyperlink element representing a project title with an external link icon.
+ * @param {string} text - The text content of the project title.
+ * @param {string} href - The URL to which the hyperlink points.
+ * @returns {HTMLAnchorElement} - A hyperlink element with the project title and an external link icon.
+ */
+function createLinkTitle(text, href) {
     const link = document.createElement("a");
     const icon = document.createElement("i");
 
     link.href = href;
     link.target = "_blank";
     link.textContent = text;
-    link.className = 'table__tbody--link'
+    link.className = 'table__tbody--project'
     icon.className = "uil uil-external-link-alt";
     link.appendChild(icon);
 
     return link;
-
 }
 
+/**
+ * Create and return a container element representing the list of skills used to build a project.
+ * @param {string[]} skills - An array of skill names used for the project.
+ * @returns {HTMLDivElement} - A container element with badges for each skill.
+ */
 function createBuildWith(skills) {
     const container = document.createElement("div");
     container.className = 'table__tbody--skills'
@@ -51,65 +99,5 @@ function createBuildWith(skills) {
     return container;
 }
 
-const data = [
-    [createLinkTitle('Halloween Store', 'https://halloweenstore.netlify.app/'), createBuildWith(['HTML', 'CSS', 'JavaScript', 'vue', 'quasar', 'laravel', 'java']), createLink('halloweenstore.netlify.app', 'https://halloweenstore.netlify.app/')],
-    [createLinkTitle('Christmas Store', 'https://christmastore.netlify.app/'), createBuildWith(['HTML', 'CSS', 'JavaScript']), createLink('christmastore.netlify.app', 'https://christmastore.netlify.app/')],
-];
-
-let grid = null;
-
-// Función para crear y renderizar la tabla
-function createAndRenderTable() {
-    if (!grid) {
-        grid = new gridjs.Grid({
-            columns: [
-                {
-                    name: 'Project',
-                },
-                {
-                    name: 'Built with',
-                    hidden: window.innerWidth <= 425,
-                },
-                {
-                    name: 'Link',
-                    hidden: window.innerWidth < 768,
-                },
-            ],
-            data: data,
-            className: {
-                table: 'table',
-                container: 'table__container',
-                tbody: 'table__tbody',
-                td: 'table__tbody--td',
-                th: 'table__tbody--th',
-            },
-        }).render(document.getElementById("wrapper"));
-    } else {
-        // Actualizar la visibilidad de las columnas según el tamaño de la ventana
-        grid.updateConfig({
-            columns: [
-                {
-                    name: 'Project',
-                },
-                {
-                    name: 'Built with',
-                    hidden: window.innerWidth <= 425,
-                },
-                {
-                    name: 'Link',
-                    hidden: window.innerWidth < 768,
-                },
-            ],
-            data: data,
-        }).forceRender();
-    }
-}
-
-// Llama a la función para crear y renderizar la tabla cuando se carga la página
-createAndRenderTable();
-
-// Evento de cambio de tamaño de ventana
-window.addEventListener('resize', () => {
-    // Revisa las condiciones y actualiza la visibilidad de las columnas
-    createAndRenderTable();
-});
+createGrid(); // Create Table
+window.addEventListener('resize', createGrid);

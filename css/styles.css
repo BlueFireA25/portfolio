@@ -76,6 +76,10 @@ main {
   padding: 4.8rem 2.4rem;
 }
 
+input {
+  font-family: var(--body-font);
+}
+
 ul {
   list-style: none;
 }
@@ -194,6 +198,7 @@ a {
   margin-bottom: var(--m-xl);
 }
 
+/* Projects table */
 .gridjs-wrapper {
   box-shadow: none;
 }
@@ -220,6 +225,15 @@ a {
   padding-left: 0 !important;
 }
 
+/* Column type */
+.table__tbody--type {
+  color: var(--light-color);
+  opacity: 0.7;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium-bold);
+}
+
+/* Column project */
 .table__tbody--project {
   color: var(--light-color);
   opacity: 0.9;
@@ -244,6 +258,7 @@ a {
   transform: translate(4px, -4px);
 }
 
+/* Column skills */
 .table__tbody--skills {
   display: flex;
   flex-wrap: wrap;
@@ -259,31 +274,22 @@ a {
   padding: var(--p-xs) var(--p-sm);
 }
 
-.table__tbody--link {
-  color: var(--light-color);
-  opacity: 0.7;
+.table__footer {
   font-size: var(--small-font-size);
-  font-weight: var(--font-medium-bold);
+  background-color: transparent !important;
+  border-top: none;
+  box-shadow: none;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.table__tbody--link:hover {
-  color: var(--primary-color);
-  opacity: 1;
-}
-
-.table__tbody--link i {
-  display: inline-block;
+.table__pagination {
+  font-size: var(--small-font-size);
   color: var(--light-color);
-  font-size: var(--normal-font-size);
-  transition: transform 0.3s ease-in-out;
-  margin-left: var(--m-sm);
 }
 
-.table__tbody--link:hover i {
-  color: var(--primary-color);
-  transform: translate(4px, -4px);
-}
-
+/*==================== MEDIA QUERIES ====================*/
+/* For medium devices */
 @media (min-width: 768px) {
   .main {
     padding: 4.8rem;
@@ -294,6 +300,7 @@ a {
   }
 }
 
+/* For large devices */
 @media (min-width: 1024px) {
   .main {
     padding: 9.6rem;
