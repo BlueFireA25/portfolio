@@ -296,6 +296,15 @@ a {
   color: var(--light-color);
 }
 
+.table__pagination--button {
+  background-color: transparent !important;
+  color: var(--light-color) !important;
+}
+
+.table__pagination--button--current {
+  color: var(--primary-color) !important;
+}
+
 /*==================== MEDIA QUERIES ====================*/
 /* For medium devices */
 @media (min-width: 768px) {

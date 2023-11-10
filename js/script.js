@@ -23,7 +23,7 @@ function createGrid() {
             },
         ],
         pagination: {
-            limit: 4
+            limit: 2
         },
         search: true,
         data: data,
@@ -35,6 +35,8 @@ function createGrid() {
             th: 'table__tbody--th',
             footer: 'table__footer',
             pagination: 'table__pagination',
+            paginationButton: 'table__pagination--button',
+            paginationButtonCurrent: 'table__pagination--button--current'
         },
     }).render(document.getElementById("wrapper"));
 }
@@ -94,3 +96,6 @@ function createBuildWith(skills) {
 }
 
 createGrid(); // Create Table
+
+window.addEventListener('resize', createGrid);
+
