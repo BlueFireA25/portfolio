@@ -95,6 +95,7 @@ a {
 
 .title-container {
   text-align: center;
+  margin-bottom: var(--m-xl);
 }
 
 .section__title {
@@ -305,11 +306,93 @@ a {
   color: var(--primary-color) !important;
 }
 
+/*==================== CONTACT ====================*/
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;
+}
+
+.contact__items .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact__items .item i {
+  font-size: var(--h5-font-size);
+  color: var(--primary-color);
+}
+
+.contact__items .item span {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 28px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  text-wrap: balance;
+  opacity: 0.9;
+}
+
+.contact__social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  align-self: center;
+}
+
+.contact__social a {
+  font-size: var(--h4-font-size);
+  color: var(--light-color);
+  transition: color 0.3s ease;
+}
+
+.contact__social a:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+/*==================== FOOTER ====================*/
+.footer p {
+  font-size: var(--small-font-size);
+  text-align: center;
+  text-wrap: balance;
+  margin: auto;
+  padding: 0 2.4rem 4.8rem 2.4rem;
+}
+
 /*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+@media (min-width: 425px) {
+  .contact__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
 /* For medium devices */
 @media (min-width: 768px) {
   .main {
     padding: 4.8rem;
+  }
+
+  .contact__container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
   }
 
   .all-projects-container .title {
