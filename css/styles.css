@@ -306,6 +306,41 @@ a {
   color: var(--primary-color) !important;
 }
 
+/*==================== SKILLS ====================*/
+.skills {
+  overflow-x: hidden;
+}
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  width: max-content;
+}
+
+.slide-track {
+  -webkit-animation: scroll 20s linear infinite;
+  animation: scroll 20s linear infinite;
+  display: flex;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8));
+  }
+}
 /*==================== CONTACT ====================*/
 .contact__container {
   display: flex;

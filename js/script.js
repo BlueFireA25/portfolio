@@ -98,4 +98,3 @@ function createBuildWith(skills) {
 createGrid(); // Create Table
 
 window.addEventListener('resize', createGrid);
-
