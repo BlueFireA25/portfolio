@@ -220,7 +220,7 @@ a {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi-bold);
-  background-color: #2195f3c9;
+  background-color: var(--accent-color);
   border-radius: 8px;
   border: none;
   color: var(--light-color);
@@ -231,7 +231,7 @@ a {
 }
 
 .home__buttons .button:hover {
-  background-color: var(--primary-color);
+  background-color: #4a5ecf;
 }
 
 /*==================== EXPERIENCE ====================*/
@@ -506,6 +506,32 @@ a {
   text-wrap: balance;
   margin: auto;
   padding: 0 2.4rem 4.8rem 2.4rem;
+}
+
+/*==================== SCROLL UP ====================*/
+.scrollup {
+  position: fixed;
+  right: 1.6rem;
+  bottom: -20%;
+  background-color: var(--accent-color);
+  padding: 0 0.48rem;
+  border-radius: 6.4px;
+  z-index: 10;
+  transition: 0.4s;
+}
+
+.scrollup:hover {
+  background-color: #4a5ecf;
+}
+
+.scrollup__icon {
+  font-size: var(--h5-font-size);
+  color: var(--light-color);
+}
+
+/* Show scroll */
+.show-scroll {
+  bottom: 8rem;
 }
 
 /*==================== MEDIA QUERIES ====================*/
