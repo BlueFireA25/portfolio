@@ -377,16 +377,14 @@ a {
 /*==================== EXPERIENCE ====================*/
 /*==================== PROJECTS ====================*/
 .projects__container {
-  margin-top: 4.8rem;
+  margin-top: var(--m-xl);
   text-align: center;
-  cursor: pointer;
 }
 
 .projects__content {
   display: grid;
   place-items: center;
-  margin-inline: var(--m-lg);
-  padding-block: 8rem;
+  margin-bottom: 5.6rem;
 }
 
 .card__container {
@@ -401,14 +399,14 @@ a {
 
 .card__img {
   display: block;
-  width: 328px;
+  width: 100%;
   max-width: 100%;
   height: auto;
   border-radius: 24px;
 }
 
 .card__data {
-  width: 80%;
+  width: 90%;
   background-color: var(--body-color-light);
   padding: 24px 32px;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
@@ -814,13 +812,8 @@ a {
     gap: 32px;
   }
 
-  .projects__content {
-    margin-inline: 16px;
-  }
-
   .card__data {
-    width: 80%;
-    padding: 16px;
+    width: 90%;
   }
 }
 
@@ -836,7 +829,7 @@ a {
 
   .card__container {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 24px;
+    column-gap: 48px;
   }
 
   .contact__container {
@@ -927,10 +920,6 @@ a {
   .home__buttons .button {
     width: 200px;
     flex-direction: row;
-  }
-
-  .projects__content {
-    margin-inline: 16px;
   }
 
   .card__container {
