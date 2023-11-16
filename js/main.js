@@ -65,6 +65,26 @@ function scrollUp() {
 
 window.addEventListener('scroll', scrollUp)
 
+document.getElementById('theme-toggle').addEventListener('click', function () {
+    var icon = document.querySelector('.theme__toggle i');
+    var rootStyle = document.documentElement.style;
+
+    if (icon.classList.contains('uil-sun')) {
+        icon.classList.remove('uil-sun');
+        icon.classList.add('uil-moon');
+        rootStyle.setProperty('--body-color-dark', '#f5f7f8');
+        rootStyle.setProperty('--light-color', '#3d3c42');
+
+    }
+    else if (icon.classList.contains('uil-moon')) {
+        icon.classList.remove('uil-moon');
+        icon.classList.add('uil-sun');
+        rootStyle.setProperty('--body-color-dark', '#0f172a');
+        rootStyle.setProperty('--light-color', '#fff6f6');
+    }
+});
+
+
 /*=============== EXPERIENCE TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]'), tabContents = document.querySelectorAll('[data-content]')
 

@@ -69,6 +69,11 @@ body {
   color: var(--light-color);
 }
 
+.body__light-theme {
+  background-color: var(--body-color-light);
+  color: var(--dark-color);
+}
+
 main {
   display: grid;
   margin: 0 auto;
@@ -90,7 +95,7 @@ a {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-  padding: 0 0 10rem;
+  padding: 10rem 0;
 }
 
 .title-container {
@@ -363,7 +368,7 @@ a {
   background-color: var(--accent-color);
   border-radius: 8px;
   border: none;
-  color: var(--light-color);
+  color: #fff6f6;
   padding: 16px 20px;
   text-align: center;
   cursor: pointer;
@@ -434,16 +439,98 @@ a {
   margin-bottom: var(--m-sm);
 }
 
+/* Column project */
+.experience__title a {
+  color: var(--light-color);
+  opacity: 0.9;
+  font-weight: var(--font-semi-bold);
+}
+
+.experience__title a:hover {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.experience__title a i {
+  display: inline-block;
+  color: var(--light-color);
+  font-size: var(--normal-font-size);
+  transition: transform 0.3s ease-in-out;
+  margin-left: var(--m-xs);
+}
+
+.experience__title a:hover i {
+  color: var(--primary-color);
+  transform: translate(4px, -4px);
+}
+
 .experience__description {
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi-bold);
   color: #94a3b8;
   list-style: inside;
-  margin: 0 0 0 24px;
+  margin: 0 0 var(--m-lg) var(--m-lg);
 }
 
 .experience__description li {
   text-wrap: balance;
+}
+
+.experience__description--courses {
+  list-style: inside;
+  margin: 0 0 var(--m-lg) var(--m-lg);
+}
+
+.experience__description--courses a {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  color: #94a3b8;
+}
+
+.experience__description--courses a:hover {
+  color: var(--primary-color);
+}
+
+.experience__description--courses li {
+  text-wrap: balance;
+}
+
+.experience__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--m-sm);
+}
+
+.experience__badge {
+  width: fit-content;
+  font-size: var(--smaller-font-size);
+  background-color: var(--accent-color);
+  color: #fff6f6;
+  border-radius: 999px;
+  padding: var(--p-xs) var(--p-sm);
+}
+
+.experience-courses span {
+  color: var(--light-color);
+  font-size: var(--normal-font-size);
+}
+
+.experience-courses:hover span {
+  text-decoration: underline var(--light-color);
+  text-underline-offset: var(--m-sm);
+}
+
+.experience-courses i {
+  display: inline-block;
+  color: var(--light-color);
+  font-size: var(--normal-font-size);
+  transition: transform 0.3s ease-in-out;
+  margin-left: var(--m-xs);
+}
+
+.experience-courses:hover i {
+  transform: translate(4px, -4px);
 }
 
 /*==================== PROJECTS ====================*/
@@ -509,7 +596,7 @@ a {
   width: fit-content;
   font-size: var(--smaller-font-size);
   background-color: var(--accent-color);
-  color: var(--light-color);
+  color: #fff6f6;
   border-radius: 999px;
   padding: var(--p-xs) var(--p-sm);
 }
@@ -599,7 +686,7 @@ a {
 
 .project-link span {
   color: var(--light-color);
-  font-size: var(--normal-font-size);
+  font-size: var(--h6-font-size);
 }
 
 .project-link:hover span {
@@ -610,7 +697,7 @@ a {
 .project-link i {
   display: inline-block;
   color: var(--light-color);
-  font-size: var(--normal-font-size);
+  font-size: var(--h6-font-size);
   transition: transform 0.3s ease-in-out;
   margin-left: var(--m-xs);
 }
@@ -740,7 +827,7 @@ a {
   width: fit-content;
   background-color: var(--accent-color);
   border-radius: 999px;
-  color: var(--light-color);
+  color: #fff6f6;
   font-size: var(--smaller-font-size);
   padding: var(--p-xs) var(--p-sm);
 }
@@ -985,7 +1072,6 @@ a {
 
   .nav__link {
     text-transform: initial;
-    font-weight: initial;
   }
 
   .home__container {
