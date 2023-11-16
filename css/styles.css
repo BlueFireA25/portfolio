@@ -375,6 +375,77 @@ a {
 }
 
 /*==================== EXPERIENCE ====================*/
+.experience__tabs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: var(--m-xl);
+}
+
+.experience__button {
+  font-size: var(--h6-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+
+.experience__button:hover {
+  color: var(--primary-color);
+}
+
+.experience__icon {
+  font-size: 2.8rem;
+  margin-right: var(--m-xs);
+}
+
+.experience [data-content] {
+  display: none;
+}
+
+.experience__active[data-content] {
+  display: block;
+}
+
+.experience__button.experience__active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.experience__content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.experience__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience__date {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: #94a3b8;
+}
+
+.experience__title {
+  font-size: var(--h6-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--m-sm);
+}
+
+.experience__description {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  color: #94a3b8;
+  list-style: inside;
+  margin: 0 0 0 24px;
+}
+
+.experience__description li {
+  text-wrap: balance;
+}
+
 /*==================== PROJECTS ====================*/
 .projects__container {
   margin-top: var(--m-xl);
@@ -384,7 +455,7 @@ a {
 .projects__content {
   display: grid;
   place-items: center;
-  margin-bottom: 5.6rem;
+  margin-bottom: 7rem;
 }
 
 .card__container {
@@ -824,11 +895,15 @@ a {
 
 /*==================== BREAKPOINTS ====================*/
 /* For small devices */
-@media (max-width: 375px) {
+@media (max-width: 374px) {
   .card__data {
     flex-direction: column;
     justify-content: start;
     align-items: start;
+  }
+
+  .experience__tabs {
+    justify-content: space-between;
   }
 }
 
@@ -854,6 +929,17 @@ a {
 
   .main {
     padding: 4.8rem;
+  }
+
+  .experience__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .experience__date {
+    align-self: center;
+    text-align: center;
   }
 
   .card__container {
