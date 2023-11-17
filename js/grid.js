@@ -1,3 +1,4 @@
+/*=============== CHANGE THEME ===============*/
 document.getElementById('theme-toggle').addEventListener('click', function () {
     var icon = document.querySelector('.theme__toggle i');
     var rootStyle = document.documentElement.style;
@@ -46,6 +47,11 @@ function createGrid() {
         },
         search: true,
         data: data,
+        language: {
+            'search': {
+                'placeholder': '🔍 Search...'
+            },
+        },
         className: {
             table: 'table',
             container: 'table__container',

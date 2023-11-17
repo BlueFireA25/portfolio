@@ -45,7 +45,7 @@ function scrollActive() {
 
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
+        const sectionTop = current.offsetTop - 200;
         const sectionId = current.getAttribute('id')
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -65,6 +65,7 @@ function scrollUp() {
 
 window.addEventListener('scroll', scrollUp)
 
+/*=============== CHANGE THEME ===============*/
 document.getElementById('theme-toggle').addEventListener('click', function () {
     var icon = document.querySelector('.theme__toggle i');
     var rootStyle = document.documentElement.style;

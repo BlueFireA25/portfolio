@@ -94,7 +94,9 @@
         </a>
 
         <div class="nav__settings">
-          <i class="uil uil-language"></i>
+          <div onclick="toggleLanguage()">
+            <i class="uil uil-language"></i>
+          </div>
           <div class="theme__toggle" id="theme-toggle">
             <i class="uil uil-sun"></i>
           </div>
@@ -110,7 +112,7 @@
           <span>Sebastián Ibagué Castro</span>
         </a>
         <div class="all-projects-container">
-          <h2 class="title">All Projects</h2>
+          <h2 class="title" data-i18n="full_projects_title">All Projects</h2>
           <div id="wrapper"></div>
         </div>
       </div>
@@ -118,11 +120,14 @@
 
     <!--==================== FOOTER ====================-->
     <footer class="footer">
-      <p>Made with 💪🏻 by Sebastián Ibagué Castro. © All right reserver.</p>
+      <p data-i18n="copy">
+        Made with 💪🏻 by Sebastián Ibagué Castro. © All right reserver.
+      </p>
     </footer>
 
     <!--==================== GRID JS ====================-->
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
     <script src="js/grid.js"></script>
+    <script src="js/i18n.js" defer></script>
   </body>
 </html>

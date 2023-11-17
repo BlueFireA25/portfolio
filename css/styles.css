@@ -95,7 +95,7 @@ a {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-  padding: 10rem 0;
+  padding: 10rem 0 0 0;
 }
 
 .title-container {
@@ -300,7 +300,6 @@ a {
 
 .home__description {
   position: relative;
-  color: #94a3b8;
   font-size: 16px;
   font-weight: var(--font-regular);
   line-height: 26px;
@@ -326,6 +325,10 @@ a {
   bottom: 0;
   width: 25%;
   border-bottom: 2px solid var(--primary-color);
+}
+
+.home__description--hight {
+  color: #94a3b8 !important;
 }
 
 .home__description span {
@@ -514,6 +517,7 @@ a {
 .experience-courses span {
   color: var(--light-color);
   font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
 }
 
 .experience-courses:hover span {
@@ -687,6 +691,7 @@ a {
 .project-link span {
   color: var(--light-color);
   font-size: var(--h6-font-size);
+  font-weight: var(--font-semi-bold);
 }
 
 .project-link:hover span {
@@ -972,7 +977,7 @@ a {
 
 .scrollup__icon {
   font-size: var(--h5-font-size);
-  color: var(--light-color);
+  color: #fff6f6;
 }
 
 /* Show scroll */

@@ -91,19 +91,33 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
+              <a
+                href="#home"
+                class="nav__link active-link"
+                data-i18n="menu_item_1"
+              >
+                Home
+              </a>
             </li>
             <li class="nav__item">
-              <a href="#experience" class="nav__link">Experience</a>
+              <a href="#experience" class="nav__link" data-i18n="menu_item_2">
+                Experience
+              </a>
             </li>
             <li class="nav__item">
-              <a href="#projects" class="nav__link">Projects</a>
+              <a href="#projects" class="nav__link" data-i18n="menu_item_3">
+                Projects
+              </a>
             </li>
             <li class="nav__item">
-              <a href="#skills" class="nav__link">Skills</a>
+              <a href="#skills" class="nav__link" data-i18n="menu_item_4"
+                >Skills</a
+              >
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+              <a href="#contact" class="nav__link" data-i18n="menu_item_5"
+                >Contact</a
+              >
             </li>
           </ul>
 
@@ -113,7 +127,9 @@
         </div>
 
         <div class="nav__settings">
-          <i class="uil uil-language"></i>
+          <div onclick="toggleLanguage()">
+            <i class="uil uil-language"></i>
+          </div>
           <div class="theme__toggle" id="theme-toggle">
             <i class="uil uil-sun"></i>
           </div>
@@ -138,18 +154,33 @@
           <div>
             <h2 class="home__title">Sebastián Ibagué Castro</h2>
             <h1 class="home__subtitle">
-              <span>Frontend Developer</span>
+              <span data-i18n="profession_1">Frontend Developer</span>
               <span>|</span>
-              <span>Systems Engineer</span>
+              <span data-i18n="profession_2">Systems Engineer</span>
             </h1>
 
             <p class="home__description">
-              Frontend Developer and Systems Engineer, with knowledge in
-              <span>web programming/design</span>. <br />
+              <span
+                class="home__description--hight"
+                data-i18n="home_description_text_1"
+              >
+                Frontend Developer and Systems Engineer, with knowledge in
+              </span>
+              <span data-i18n="home_description_hight_1">
+                web programming/design </span
+              >.
               <br />
-              I am a responsible person with ease of working individually and as
-              a team, always focused on
-              <span>developing quality software</span>.
+              <br />
+              <span
+                class="home__description--hight"
+                data-i18n="home_description_text_2"
+              >
+                I am a responsible person with ease of working individually and
+                as a team, always focused on
+              </span>
+              <span data-i18n="home_description_hight_2">
+                developing quality software </span
+              >.
             </p>
 
             <div class="home__links">
@@ -165,8 +196,10 @@
                 </a>
               </div>
               <div class="home__buttons">
-                <a class="button" href="#contact">Contact</a>
-                <a class="button">Download CV</a>
+                <a class="button" href="#contact" data-i18n="home_button_1">
+                  Contact
+                </a>
+                <a class="button" data-i18n="home_button_2">Download CV</a>
               </div>
             </div>
           </div>
@@ -176,7 +209,7 @@
       <!--==================== EXPERIENCE ====================-->
       <section class="experience section" id="experience">
         <div class="title-container">
-          <h2 class="section__title">Experience</h2>
+          <h2 class="section__title" data-i18n="experience">Experience</h2>
         </div>
         <div class="experience__container">
           <div class="experience__tabs">
@@ -185,11 +218,11 @@
               data-target="#work"
             >
               <i class="uil uil-briefcase-alt"></i>
-              Work
+              <span data-i18n="tab1">Work</span>
             </div>
             <div class="experience__button" data-target="#education">
               <i class="uil uil-graduation-cap experience__icon"></i>
-              Education
+              <span data-i18n="tab2">Education</span>
             </div>
           </div>
 
@@ -202,20 +235,30 @@
             >
               <div class="experience__content">
                 <div class="experience__item">
-                  <div class="experience__date">MAY 2022 - TODAY</div>
+                  <div class="experience__date" data-i18n="work_date_1">
+                    MAY 2022 - TODAY
+                  </div>
                   <div>
                     <div class="experience__title">
                       <a href="https://snabb.cl/#/" target="_blank">
-                        Frontend Developer · Snabb
+                        <span data-i18n="work_title_1">
+                          Frontend Developer · Snabb
+                        </span>
                         <i class="uil uil-external-link-alt"></i>
                       </a>
                     </div>
                     <ul class="experience__description">
-                      <li>Creation of new projects with Vue and Quasar.</li>
-                      <li>REST API consumption.</li>
-                      <li>Creation of Stores in Pinia.</li>
-                      <li>Creating components in Vue.</li>
-                      <li>FHIR documentation.</li>
+                      <li data-i18n="work_item_1">
+                        Creation of new projects with Vue and Quasar.
+                      </li>
+                      <li data-i18n="work_item_2">REST API consumption.</li>
+                      <li data-i18n="work_item_3">
+                        Creation of Stores in Pinia.
+                      </li>
+                      <li data-i18n="work_item_4">
+                        Creating components in Vue.
+                      </li>
+                      <li data-i18n="work_item_5">FHIR documentation.</li>
                     </ul>
                     <div class="experience__badges">
                       <span class="experience__badge">HTML</span>
@@ -232,25 +275,31 @@
                   <div>
                     <div class="experience__title">
                       <a href="https://binapps.com/" target="_blank">
-                        Full Stack Developer · Binapps
+                        <span data-i18n="work_title_2">
+                          Full Stack Developer · Binapps
+                        </span>
                         <i class="uil uil-external-link-alt"></i>
                       </a>
                     </div>
                     <ul class="experience__description">
-                      <li>
+                      <li data-i18n="work_item_6">
                         Participation and creation of new web applications.
                       </li>
-                      <li>
+                      <li data-i18n="work_item_7">
                         Correction of errors and support in the different web
                         applications of the company.
                       </li>
-                      <li>Development of user interfaces.</li>
-                      <li>
+                      <li data-i18n="work_item_8">
+                        Development of user interfaces.
+                      </li>
+                      <li data-i18n="work_item_9">
                         Implementation of new functions and features in its main
                         ERP software and in the different developments of the
                         company.
                       </li>
-                      <li>Bug fixes and support in your core ERP software.</li>
+                      <li data-i18n="work_item_10">
+                        Bug fixes and support in your core ERP software.
+                      </li>
                     </ul>
                     <div class="experience__badges">
                       <span class="experience__badge">HTML</span>
@@ -268,21 +317,27 @@
             <div class="experience__data" data-content id="education">
               <div class="experience__content">
                 <div class="experience__item">
-                  <div class="experience__date">AUG 2015 - MAR 2021</div>
+                  <div class="experience__date" data-i18n="education_date_1">
+                    AUG 2015 - MAR 2021
+                  </div>
                   <div>
                     <div class="experience__title">
                       <a href="https://www.autonoma.edu.co/" target="_blank">
-                        Systems Engineer · UAM
+                        <span data-i18n="education_title_1">
+                          Systems Engineer · UAM
+                        </span>
                         <i class="uil uil-external-link-alt"></i>
                       </a>
                     </div>
                   </div>
                 </div>
                 <div class="experience__item">
-                  <div class="experience__date">ALL THE TIME</div>
+                  <div class="experience__date" data-i18n="education_date_2">
+                    <span data-i18n="education_title_2">ALL THE TIME</span>
+                  </div>
                   <div>
                     <div class="experience__title">
-                      <span> Other Studies </span>
+                      <span data-i18n="education_title_2">Other Studies</span>
                     </div>
                     <ul class="experience__description--courses">
                       <li>
@@ -341,7 +396,9 @@
                       href="https://www.linkedin.com/in/sebastianibaguecastro/"
                       target="_blank"
                     >
-                      <span>You can see all my courses on my LinkedIn</span>
+                      <span data-i18n="education_subtitle"
+                        >You can see all my courses on my LinkedIn</span
+                      >
                       <i class="uil uil-external-link-alt"></i>
                     </a>
                   </div>
@@ -355,7 +412,7 @@
       <!--==================== PROJECTS ====================-->
       <section class="projects section" id="projects">
         <div class="title-container">
-          <h2 class="section__title">Projects</h2>
+          <h2 class="section__title" data-i18n="projects">Projects</h2>
         </div>
         <div class="projects__container">
           <div class="projects__content">
@@ -485,7 +542,7 @@
             </div>
           </div>
           <a class="project-link" href="projects.html">
-            <span>View Full Projects</span>
+            <span data-i18n="full_projects">View Full Projects</span>
             <i class="uil uil-external-link-alt"></i>
           </a>
         </div>
@@ -494,7 +551,7 @@
       <!--==================== SKILLS ====================-->
       <section class="skills section" id="skills">
         <div class="title-container">
-          <h2 class="section__title">Skills</h2>
+          <h2 class="section__title" data-i18n="skills">Skills</h2>
         </div>
         <div class="slider">
           <div class="slide-track">
@@ -939,7 +996,7 @@
       <!--==================== CONTACT ====================-->
       <section class="contact section" id="contact">
         <div class="title-container">
-          <h2 class="section__title">Contact</h2>
+          <h2 class="section__title" data-i18n="contact">Contact</h2>
         </div>
         <div class="contact__container">
           <div class="contact__items">
@@ -973,7 +1030,9 @@
 
     <!--==================== FOOTER ====================-->
     <footer class="footer">
-      <p>Made with 💪🏻 by Sebastián Ibagué Castro. © All right reserver.</p>
+      <p data-i18n="copy">
+        Made with 💪🏻 by Sebastián Ibagué Castro. © All right reserver.
+      </p>
     </footer>
 
     <!--==================== SCROLL UP ====================-->
@@ -983,5 +1042,6 @@
 
     <!--==================== MAIN JS ====================-->
     <script src="js/main.js" defer></script>
+    <script src="js/i18n.js" defer></script>
   </body>
 </html>
