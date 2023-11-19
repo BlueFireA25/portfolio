@@ -20,8 +20,7 @@ document.getElementById('theme-toggle').addEventListener('click', function () {
 
 // VARIABLES //
 const data = [
-    [createType('Landing Page'), createLinkTitle('Halloween Store', 'https://halloweenstore.netlify.app/'), createBuildWith(['HTML', 'CSS', 'JavaScript', 'vue', 'quasar', 'laravel', 'java'])],
-    [createType('Landing Page'), createLinkTitle('Christmas Store', 'https://christmastore.netlify.app/'), createBuildWith(['HTML', 'CSS', 'JavaScript'])],
+    [createType('Login'), createLinkTitle('Login Form', 'https://bluefirea25.github.io/login-form/'), createBuildWith(['HTML', 'CSS', 'JavaScript'])],
 ];
 
 /**
