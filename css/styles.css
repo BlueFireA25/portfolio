@@ -305,7 +305,7 @@ a {
   line-height: 26px;
   box-sizing: border-box;
   padding: 16px 0 16px 0;
-  text-wrap: balance;
+  text-wrap: pretty;
   margin-bottom: 3rem;
 }
 
@@ -476,7 +476,8 @@ a {
 }
 
 .experience__description li {
-  text-wrap: balance;
+  margin-bottom: var(--m-sm);
+  text-wrap: pretty;
 }
 
 .experience__description--courses {
