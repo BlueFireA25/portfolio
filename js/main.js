@@ -76,7 +76,6 @@ document.getElementById('theme-toggle').addEventListener('click', function () {
         rootStyle.setProperty('--body-color-dark', '#f5f7f8');
         rootStyle.setProperty('--light-color', '#3d3c42');
         rootStyle.setProperty('--gray-color', '#3d3c42');
-
     }
     else if (icon.classList.contains('uil-moon')) {
         icon.classList.remove('uil-moon');
@@ -107,23 +106,3 @@ tabs.forEach(tab => {
     })
 })
 
-/*=============== CURSOR ILUMINATE ===============*/
-document.addEventListener("DOMContentLoaded", function () {
-    const circle = document.getElementById("circle");
-
-    document.addEventListener("mousemove", function (e) {
-        updateCirclePosition(e);
-    });
-
-    window.addEventListener("scroll", function (e) {
-        updateCirclePosition(e);
-    });
-
-    function updateCirclePosition(e) {
-        const x = e.clientX;
-        const y = e.clientY + window.scrollY; // Ajusta la posición vertical con el desplazamiento
-
-        circle.style.left = x + "px";
-        circle.style.top = y + "px";
-    }
-});

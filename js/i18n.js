@@ -102,6 +102,16 @@ function changeLanguage(language) {
     });
 
     document.documentElement.lang = language;
+
+    // Curriculum Language
+    const linkElement = document.querySelector('.curriculum');
+    if (linkElement) {
+        if (language === 'en') {
+            linkElement.href = 'curriculums/Sebastian Ibague Castro CV (EN).pdf';
+        } else if (language === 'es') {
+            linkElement.href = 'curriculums/Sebastian Ibague Castro CV (ES).pdf';
+        }
+    }
 }
 
 changeLanguage(languages[actualLanguage]);

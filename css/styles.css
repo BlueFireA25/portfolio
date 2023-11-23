@@ -9,6 +9,7 @@
   --dark-color: #3d3c42;
   --gray-color: #94a3b8;
   --light-color: #fff6f6;
+  --table-border-color: #fff6f618;
   --positive-color: #21ba45;
   --negative-color: #c10015;
   --info-color: #31ccec;
@@ -331,6 +332,7 @@ a {
 
 .home__description--hight {
   color: var(--gray-color) !important;
+  font-weight: var(--font-regular) !important;
 }
 
 .home__description span {
@@ -781,14 +783,14 @@ a {
   opacity: 0.9;
   font-weight: var(--font-semi-bold);
   border: none !important;
-  border-bottom: 1px solid #fff6f618 !important;
+  border-bottom: 1px solid var(--table-border-color) !important;
   padding-left: 0 !important;
 }
 
 .table__tbody--td {
   background-color: transparent !important;
   border: none !important;
-  border-bottom: 1px solid #fff6f618 !important;
+  border-bottom: 1px solid var(--table-border-color) !important;
   padding-left: 0 !important;
 }
 
@@ -987,23 +989,6 @@ a {
 /* Show scroll */
 .show-scroll {
   bottom: 8rem;
-}
-
-#circle {
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(29, 78, 216, 0.05),
-    rgba(29, 78, 216, 0.03),
-    rgba(29, 78, 216, 0.02),
-    rgba(29, 78, 216, 0.01),
-    transparent 80%
-  );
-  position: absolute;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
 }
 
 /*==================== BREAKPOINTS ====================*/
