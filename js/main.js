@@ -75,6 +75,7 @@ document.getElementById('theme-toggle').addEventListener('click', function () {
         icon.classList.add('uil-moon');
         rootStyle.setProperty('--body-color-dark', '#f5f7f8');
         rootStyle.setProperty('--light-color', '#3d3c42');
+        rootStyle.setProperty('--gray-color', '#3d3c42');
 
     }
     else if (icon.classList.contains('uil-moon')) {
@@ -82,6 +83,7 @@ document.getElementById('theme-toggle').addEventListener('click', function () {
         icon.classList.add('uil-sun');
         rootStyle.setProperty('--body-color-dark', '#0f172a');
         rootStyle.setProperty('--light-color', '#fff6f6');
+        rootStyle.setProperty('--gray-color', '#94a3b8');
     }
 });
 
@@ -104,3 +106,24 @@ tabs.forEach(tab => {
         tab.classList.add('experience__active')
     })
 })
+
+/*=============== CURSOR ILUMINATE ===============*/
+document.addEventListener("DOMContentLoaded", function () {
+    const circle = document.getElementById("circle");
+
+    document.addEventListener("mousemove", function (e) {
+        updateCirclePosition(e);
+    });
+
+    window.addEventListener("scroll", function (e) {
+        updateCirclePosition(e);
+    });
+
+    function updateCirclePosition(e) {
+        const x = e.clientX;
+        const y = e.clientY + window.scrollY; // Ajusta la posición vertical con el desplazamiento
+
+        circle.style.left = x + "px";
+        circle.style.top = y + "px";
+    }
+});

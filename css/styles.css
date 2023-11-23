@@ -7,6 +7,7 @@
   --secondary-color: #757de8;
   --accent-color: #3f51b5;
   --dark-color: #3d3c42;
+  --gray-color: #94a3b8;
   --light-color: #fff6f6;
   --positive-color: #21ba45;
   --negative-color: #c10015;
@@ -67,6 +68,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color-dark);
   color: var(--light-color);
+  overflow-x: hidden;
 }
 
 .body__light-theme {
@@ -170,7 +172,7 @@ a {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .nav__menu {
     position: fixed;
     width: 100%;
@@ -198,8 +200,8 @@ a {
 .nav__close {
   font-size: 3rem;
   position: absolute;
-  top: 0.5rem;
-  right: 0.7rem;
+  top: 2.4rem;
+  right: 2.4rem;
   cursor: pointer;
 }
 
@@ -328,7 +330,7 @@ a {
 }
 
 .home__description--hight {
-  color: #94a3b8 !important;
+  color: var(--gray-color) !important;
 }
 
 .home__description span {
@@ -433,7 +435,7 @@ a {
 .experience__date {
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
-  color: #94a3b8;
+  color: var(--gray-color);
 }
 
 .experience__title {
@@ -470,7 +472,7 @@ a {
 .experience__description {
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi-bold);
-  color: #94a3b8;
+  color: var(--gray-color);
   list-style: inside;
   margin: 0 0 var(--m-lg) var(--m-lg);
 }
@@ -478,6 +480,7 @@ a {
 .experience__description li {
   margin-bottom: var(--m-sm);
   text-wrap: pretty;
+  font-weight: var(--font-regular);
 }
 
 .experience__description--courses {
@@ -488,7 +491,7 @@ a {
 .experience__description--courses a {
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi-bold);
-  color: #94a3b8;
+  color: var(--gray-color);
 }
 
 .experience__description--courses a:hover {
@@ -986,6 +989,23 @@ a {
   bottom: 8rem;
 }
 
+#circle {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(29, 78, 216, 0.05),
+    rgba(29, 78, 216, 0.03),
+    rgba(29, 78, 216, 0.02),
+    rgba(29, 78, 216, 0.01),
+    transparent 80%
+  );
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
 /*==================== BREAKPOINTS ====================*/
 /* For small devices */
 @media (max-width: 374px) {
@@ -997,6 +1017,11 @@ a {
 
   .experience__tabs {
     justify-content: space-between;
+  }
+
+  .experience__badges {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
   }
 }
 
@@ -1031,7 +1056,7 @@ a {
   }
 
   .experience__date {
-    align-self: center;
+    align-self: start;
     text-align: center;
   }
 
@@ -1065,6 +1090,12 @@ a {
 }
 
 /* For large devices */
+@media (max-width: 1024px) {
+  #circle {
+    display: none;
+  }
+}
+
 @media (min-width: 1024px) {
   .nav__img,
   .nav__close,
