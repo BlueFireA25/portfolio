@@ -23,7 +23,7 @@ document.getElementById('theme-toggle').addEventListener('click', function () {
 // VARIABLES //
 const data = [
     [createType('Login'), createLinkTitle('Login Form', 'https://bluefirea25.github.io/login-form/'), createBuildWith(['HTML', 'CSS'])],
-    [createType('Card/Pagination'), createLinkTitle('Card Pagination', 'https://github.com/BlueFireA25/card-pagination'), createBuildWith(['HTML', 'CSS', 'JavaScript'])],
+    [createType('Card/Pagination'), createLinkTitle('Card Pagination', 'https://bluefirea25.github.io/card-pagination/'), createBuildWith(['HTML', 'CSS', 'JavaScript'])],
 ];
 
 /**
