@@ -23,7 +23,8 @@ document.getElementById('theme-toggle').addEventListener('click', function () {
 // VARIABLES //
 const data = [
     [createType('Login'), createLinkTitle('Login Form', 'https://bluefirea25.github.io/login-form/'), createBuildWith(['HTML', 'CSS'])],
-    [createType('Card/Pagination'), createLinkTitle('Card Pagination', 'https://bluefirea25.github.io/card-pagination/'), createBuildWith(['HTML', 'CSS', 'JavaScript'])],
+    [createType('Card'), createLinkTitle('Rotating Card', 'https://bluefirea25.github.io/rotating-cards/'), createBuildWith(['HTML', 'CSS'])],
+    [createType('Card · Pagination'), createLinkTitle('Card Pagination', 'https://bluefirea25.github.io/card-pagination/'), createBuildWith(['HTML', 'CSS', 'JavaScript'])],
 ];
 
 /**
@@ -45,7 +46,7 @@ function createGrid() {
             },
         ],
         pagination: {
-            limit: 2
+            limit: 5
         },
         search: true,
         data: data,
