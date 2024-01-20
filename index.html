@@ -56,6 +56,8 @@
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+      media="print"
+      onload="this.media='all'"
     />
 
     <!--==================== CSS ====================-->
@@ -67,6 +69,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
 
     <!--==================== JS ====================-->
@@ -81,11 +85,7 @@
     <header class="header" id="header">
       <nav class="nav">
         <a href="#" class="nav__logo">
-          <img
-            src="img/icons/favicon-32x32.png"
-            alt="logo"
-            class="nav__logo-img"
-          />
+          <img src="img/icons/favicon-32x32.png" alt="logo" />
         </a>
 
         <div class="nav__menu" id="nav-menu">
@@ -147,8 +147,9 @@
         <div class="home__container">
           <img
             class="home__photo"
-            src="img/profile/profile.png"
+            src="img/profile/profile.webp"
             alt="Profile photo of Sebastián Ibagué Castro"
+            loading="eager"
           />
 
           <div>
@@ -182,12 +183,17 @@
 
             <div class="home__links">
               <div class="home__social">
-                <a href="https://github.com/BlueFireA25" target="_blank">
+                <a
+                  href="https://github.com/BlueFireA25"
+                  target="_blank"
+                  aria-label="GitHub Link"
+                >
                   <i class="uil uil-github-alt"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/sebastianibaguecastro/"
                   target="_blank"
+                  aria-label="LinkedIn Link"
                 >
                   <i class="uil uil-linkedin-alt"></i>
                 </a>
@@ -446,7 +452,7 @@
             <div class="card__container">
               <article class="card__article">
                 <img
-                  src="img/portfolio/portfolio1.png"
+                  src="img/portfolio/portfolio1.webp"
                   alt=""
                   class="card__img"
                 />
@@ -465,6 +471,7 @@
                       href="https://halloweenstore.netlify.app/"
                       target="_blank"
                       class="card__button"
+                      aria-label="Halloween Store Link"
                     >
                       <i class="uil uil-globe"></i>
                     </a>
@@ -472,6 +479,7 @@
                       href="https://github.com/BlueFireA25/Web-Halloween"
                       target="_blank"
                       class="card__button"
+                      aria-label="GitHub Link"
                     >
                       <i class="uil uil-github-alt"></i>
                     </a>
@@ -480,7 +488,7 @@
               </article>
               <article class="card__article">
                 <img
-                  src="img/portfolio/portfolio2.png"
+                  src="img/portfolio/portfolio2.webp"
                   alt=""
                   class="card__img"
                 />
@@ -499,6 +507,7 @@
                       href="https://christmastore.netlify.app/"
                       target="_blank"
                       class="card__button"
+                      aria-label="Christma Store Link"
                     >
                       <i class="uil uil-globe"></i>
                     </a>
@@ -506,6 +515,7 @@
                       href="https://github.com/BlueFireA25/Web-Christmas"
                       target="_blank"
                       class="card__button"
+                      aria-label="GitHub Link"
                     >
                       <i class="uil uil-github-alt"></i>
                     </a>
@@ -514,7 +524,7 @@
               </article>
               <article class="card__article">
                 <img
-                  src="img/portfolio/portfolio3.png"
+                  src="img/portfolio/portfolio3.webp"
                   alt=""
                   class="card__img"
                 />
@@ -533,6 +543,7 @@
                       href="https://github.com/BlueFireA25/Recipes-Blog"
                       target="_blank"
                       class="card__button"
+                      aria-label="GitHub Link"
                     >
                       <i class="uil uil-github-alt"></i>
                     </a>
@@ -541,7 +552,7 @@
               </article>
               <article class="card__article">
                 <img
-                  src="img/portfolio/portfolio4.png"
+                  src="img/portfolio/portfolio4.webp"
                   alt=""
                   class="card__img"
                 />
@@ -560,6 +571,7 @@
                       href="https://github.com/BlueFireA25/Employment-Website"
                       target="_blank"
                       class="card__button"
+                      aria-label="GitHub Link"
                     >
                       <i class="uil uil-github-alt"></i>
                     </a>
@@ -1041,12 +1053,17 @@
             </div>
           </div>
           <div class="contact__social">
-            <a href="https://github.com/BlueFireA25" target="_blank">
+            <a
+              href="https://github.com/BlueFireA25"
+              target="_blank"
+              aria-label="GitHub Link"
+            >
               <i class="uil uil-github-alt"></i>
             </a>
             <a
               href="https://www.linkedin.com/in/sebastianibaguecastro/"
               target="_blank"
+              aria-label="LinkedIn Link"
             >
               <i class="uil uil-linkedin-alt"></i>
             </a>
@@ -1063,7 +1080,12 @@
     </footer>
 
     <!--==================== SCROLL UP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
+    <a
+      href="#"
+      class="scrollup"
+      id="scroll-up"
+      aria-label="Home Scroll up Button"
+    >
       <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
 
